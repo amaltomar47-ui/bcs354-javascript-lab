@@ -1,0 +1,12 @@
+--- Task 1 (task1.html) ---
+Interactive page: Clicking 'Change text' updates heading from 'Welcome' to 'Button clicked'.
+
+--- Task 2 Output ($ node task2.js) ---
+[]
+[ 'Name is required' ]
+
+--- Task 3 (task3.html) ---
+Stores input text into localStorage under key 'note' and retrieves it upon reload.
+
+--- Task 4 (task4.html) ---
+Quiz: Selecting 5 shows 'Correct', otherwise shows 'Try again'.
