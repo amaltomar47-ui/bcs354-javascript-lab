@@ -1,9 +1,0 @@
---- Task 1 Output ($ node task1.js) ---
-Hi, I am Anita
-
---- Task 2 Output ($ node task2.js) ---
-false
-true
-
---- Task 3 Output ($ node task3.js) ---
-Car starts with 150 HP
