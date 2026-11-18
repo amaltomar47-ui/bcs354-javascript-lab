@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertis University - JavaScript Programming Lab (BCS354)</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #f59e0b;
+            --secondary: #3b82f6;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            border-left: 6px solid var(--accent);
+        }
+        header h1 { font-size: 2rem; margin-bottom: 6px; }
+        header h2 { font-size: 1.15rem; font-weight: 400; opacity: 0.9; margin-bottom: 16px; }
+        .meta-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+        .meta-item strong { color: var(--accent); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+        .badge {
+            background-color: var(--secondary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .card h3 {
+            font-size: 1.15rem;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+        .card p {
+            font-size: 0.88rem;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        .links-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .links-list a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .links-list a:hover {
+            background-color: #1e293b;
+            color: white;
+            border-color: #1e293b;
+        }
+        .output-link {
+            background-color: #eff6ff !important;
+            color: #1e40af !important;
+            border-color: #bfdbfe !important;
+        }
+        .output-link:hover {
+            background-color: #2563eb !important;
+            color: white !important;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Invertis University, Bareilly</h1>
+            <h2>JavaScript Programming Lab (BCS354) — Complete Lab Portfolio</h2>
+            <div class="meta-bar">
+                <div class="meta-item"><strong>Student:</strong> Amal Tomar</div>
+                <div class="meta-item"><strong>Roll No:</strong> 2510303070</div>
+                <div class="meta-item"><strong>GitHub:</strong> amaltomar47-ui</div>
+                <div class="meta-item"><strong>Email:</strong> amaltomar47@gmail.com</div>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- Assignment 1 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 01</span></div>
+                    <h3>Your First JavaScript Script</h3>
+                    <p>Run script in browser console, const & let declarations, and data type inspection using typeof.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-01/task1.html" target="_blank">task1.html</a>
+                    <a href="Assignment-01/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-01/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-01/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 2 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 02</span></div>
+                    <h3>Operators & Calculator</h3>
+                    <p>Arithmetic operations, explicit type conversion (Number/String), and dynamic calculator logic.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-02/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-02/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-02/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-02/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 3 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 03</span></div>
+                    <h3>Conditions and Loops</h3>
+                    <p>Conditional grade branching, counting sequences with for loops, and while loop accumulation.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-03/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-03/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-03/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-03/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 4 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 04</span></div>
+                    <h3>Writing Functions</h3>
+                    <p>Standard function returns, concise ES6 arrow functions, and default argument parameters.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-04/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-04/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-04/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-04/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 5 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 05</span></div>
+                    <h3>Arrays & Nested Arrays</h3>
+                    <p>Array indexing, forEach iteration, element filtering with predicates, and 2D matrix traversal.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-05/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-05/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-05/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-05/task4.js" target="_blank">task4.js</a>
+                    <a href="Assignment-05/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 6 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 06</span></div>
+                    <h3>JSON Text</h3>
+                    <p>Serializing objects with JSON.stringify, deserializing with JSON.parse, and robust error handling.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-06/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-06/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-06/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-06/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 7 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 07</span></div>
+                    <h3>Constructors & Classes</h3>
+                    <p>Classic constructor functions, modern ES6 class syntax, and prototype method delegation.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-07/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-07/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-07/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-07/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 8 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 08</span></div>
+                    <h3>Inheritance & Composition</h3>
+                    <p>Subclassing with extends & super, state encapsulation methods, and object composition.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-08/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-08/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-08/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-08/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 9 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 09</span></div>
+                    <h3>DOM, Storage & Quiz</h3>
+                    <p>DOM event manipulation, form validation checks, localStorage persistence, and interactive radio quiz.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-09/task1.html" target="_blank">task1.html</a>
+                    <a href="Assignment-09/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-09/task3.html" target="_blank">task3.html</a>
+                    <a href="Assignment-09/task4.html" target="_blank">task4.html</a>
+                    <a href="Assignment-09/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 10 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 10</span></div>
+                    <h3>Objects & Destructuring</h3>
+                    <p>Modifying object properties, array positional unpacking, and named object destructuring.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-10/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-10/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-10/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-10/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 11 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 11</span></div>
+                    <h3>Scope and Closures</h3>
+                    <p>Lexical scope boundaries, factory functions maintaining state across invocations, and global scope.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-11/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-11/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-11/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-11/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 12 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 12</span></div>
+                    <h3>Callbacks & HOFs</h3>
+                    <p>Higher-order functions passing callbacks, functional transformation wrappers, and repeating action loops.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-12/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-12/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-12/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-12/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 13 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 13</span></div>
+                    <h3>Reduce, Some, Every & Map</h3>
+                    <p>Array accumulation with reduce, predicate validation with some/every, and immutable array mapping.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-13/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-13/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-13/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-13/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 14 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 14</span></div>
+                    <h3>Timers and Intervals</h3>
+                    <p>Event loop microtasks with setTimeout(0), clearing scheduled timeouts, and interval count timers.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-14/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-14/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-14/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-14/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+
+            <!-- Assignment 15 -->
+            <div class="card">
+                <div>
+                    <div class="card-header"><span class="badge">Assignment 15</span></div>
+                    <h3>Promises & Async/Await</h3>
+                    <p>Promise creation, rejection catch handlers, sequential async/await execution, and mock async data fetching.</p>
+                </div>
+                <div class="links-list">
+                    <a href="Assignment-15/task1.js" target="_blank">task1.js</a>
+                    <a href="Assignment-15/task2.js" target="_blank">task2.js</a>
+                    <a href="Assignment-15/task3.js" target="_blank">task3.js</a>
+                    <a href="Assignment-15/task4.js" target="_blank">task4.js</a>
+                    <a href="Assignment-15/output.txt" class="output-link" target="_blank">output.txt</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Invertis University, Bareilly &bull; B.Tech CSE (BCS354 - JavaScript Programming Lab) &bull; Prepared for Amal Tomar (2510303070)</p>
+        </footer>
+    </div>
+</body>
+</html>
